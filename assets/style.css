@@ -1,0 +1,24 @@
+body {
+    background-color: darkorchid;
+    color:white;
+}
+
+header {
+    background-color: indianred;
+}
+
+h1 {
+    text-align: center;
+    color:mediumspringgreen;
+}
+
+.card {
+    background-color: indianred;
+}
+
+#search-button {
+    border: 5px solid mediumspringgreen ;
+    color:mediumspringgreen;
+    max-width: 40vw;
+
+}
