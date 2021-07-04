@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Git it Done</title>
@@ -21,8 +22,8 @@
     </header>
 
 
-    <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
+    <div  id = "wrap" class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
+        <div class="col-12 col-md-3 bg-light p-3">
 
             <div class="card">
                 <h3 class="card-header text-lowercase">Search By City</h3>
@@ -31,27 +32,32 @@
                     <input name="cityName" id="search-value" type="text" autofocus="true" class="form-input" />
                     <button type="submit" id="search-button" class="btn">Get Weather!</button>
                 </form>
+                <h3>Previously Searched Cities:</h3>
+                <br />
+                <ul class="list-group" id="cities-list"></ul>
             </div>
 
 
+
+
+
+
+
+
+            <div class="col-12 col-md-9 p-3 text-light">
+                <h2>Showing results for <span id="result-text"></span></h2>
+                <div id="result-content"></div>
+            </div>
         </div>
 
-        
-        
-        <div class="col-6">
-            <h3>Previously Searched Cities:</h3>
-            <br />
-            <ul class="list-group" id="cities-list"></ul>
-          </div>
-        
-        
-        
-        
-        
-       
-    </main>
+
+
+
+
+
+    </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 
