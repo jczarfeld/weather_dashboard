@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <title>Git it Done</title>
+    <title>Weather Time</title>
 </head>
 
 <body class="flex-column min-100-vh">
@@ -21,44 +20,35 @@
         </p>
     </header>
 
-
+<!-- Flex row of two colums. Left colum is search and right is results-->
     <div id="wrap"
-        class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
-        <div class="col-12 col-md-3 bg-light p-3">
+        class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh ">
+        <div id="city-search-card" class="col-12 col-md-3  p-3">
 
             <div id="search-card" class="card">
-                <h3 class="card-header text-lowercase">Search By City</h3>
+                <h3 class="card-header">Search By City</h3>
                 <form id="city-form" class="card-body">
                     <label class="form-label" for="cityName">City</label>
                     <input name="cityName" id="search-value" type="text" autofocus="true" class="form-input" />
                     <button type="submit" id="search-button" class="btn">Get Weather!</button>
                 </form>
-                <h3>Previously Searched Cities:</h3>
+
+                <!-- Lists the cities recently searched-->
+                <h3>Recently Searched Cities:</h3>
                 <br />
                 <ul class="list-group" id="cities-list"></ul>
             </div>
 
         </div>
-
-
-
-
-
-
-        <div id="result-card" class="col-12 col-md-9 p-3 text-light">
+        <!-- Shows Daily weather and a row of 5 colums are made in the js file-->
+        <div id="result-card" class="col-12 col-md-9 p-3 ">
             <h2 id="city-head">Showing results for <span id="result-text"></span></h2>
             <div id="result-content"></div>
         </div>
     </div>
-
-
-
-
-
-
     </div>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 

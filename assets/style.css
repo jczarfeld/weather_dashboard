@@ -31,6 +31,42 @@ h1 {
 
 }
 
+.day-col {
+  border: 2px solid mediumspringgreen;
+  background-color: indianred;
+}
+
+.five-row {
+  justify-content: space-between;
+  
+}
+
+#city-search-card {
+  border: 5px solid mediumspringgreen;
+  
+  
+ 
+}
+
+#search-card {
+  border:5px solid mediumspringgreen;
+ 
+}
+
+h3 {
+  color:mediumspringgreen;
+}
+#city-button {
+  border: 3px solid mediumspringgreen ;
+  color:mediumspringgreen;
+ 
+  background-color: indianred;
+
+}
+#result-content {
+  border-color: mediumspringgreen;
+}
+
 
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -40,12 +76,12 @@ h1 {
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
+/* html {
     line-height: 1.15;
     /* 1 */
-    -webkit-text-size-adjust: 100%;
+  /*  -webkit-text-size-adjust: 100%;
     /* 2 */
-  }
+/*  }
   
   /* Sections
      ========================================================================== */
@@ -1122,8 +1158,8 @@ h1 {
   
   .card .card-header {
     padding: 0.375rem;
-    background-color: #2d3e50;
-    color: #d9e9e8;
+    background-color: indianred;
+    color:mediumspringgreen;
   }
   
   .card .card-body {
@@ -1744,3 +1780,4 @@ h1 {
     }
   }
   
+   //
