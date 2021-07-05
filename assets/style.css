@@ -1,3 +1,10 @@
+* {
+ 
+    background-color: darkorchid;
+    color:mediumspringgreen;
+    text-align:center;
+}
+
 body {
     background-color: darkorchid;
     color:mediumspringgreen;
@@ -23,6 +30,8 @@ h1 {
     background-color: indianred;
 
 }
+
+
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document

@@ -22,10 +22,11 @@
     </header>
 
 
-    <div  id = "wrap" class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
+    <div id="wrap"
+        class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
         <div class="col-12 col-md-3 bg-light p-3">
 
-            <div class="card">
+            <div id="search-card" class="card">
                 <h3 class="card-header text-lowercase">Search By City</h3>
                 <form id="city-form" class="card-body">
                     <label class="form-label" for="cityName">City</label>
@@ -37,18 +38,18 @@
                 <ul class="list-group" id="cities-list"></ul>
             </div>
 
-
-
-
-
-
-
-
-            <div class="col-12 col-md-9 p-3 text-light">
-                <h2>Showing results for <span id="result-text"></span></h2>
-                <div id="result-content"></div>
-            </div>
         </div>
+
+
+
+
+
+
+        <div id="result-card" class="col-12 col-md-9 p-3 text-light">
+            <h2 id="city-head">Showing results for <span id="result-text"></span></h2>
+            <div id="result-content"></div>
+        </div>
+    </div>
 
 
 

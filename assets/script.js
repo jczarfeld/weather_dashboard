@@ -4,6 +4,7 @@ var searchBtn = document.querySelector("#search-button");
 var citiesList = document.querySelector("#cities-list");
 var resultContentEl = document.querySelector('#result-content');
 var resultText = document.querySelector("#result-text");
+var cityHead = document.querySelector("#city-head");
 
 
 function printResults(data2) {
@@ -17,13 +18,22 @@ function printResults(data2) {
     var resultBody = document.createElement('div');
     resultBody.classList.add('card-body');
     resultCard.append(resultBody);
+    
+    var tempContentEl = document.createElement('p');
+    tempContentEl.innerHTML =
+        '<strong>Current Temp: </strong> ' + data2.current.temp + ' deg F<br/>';
 
-    var titleEl = document.createElement('h3');
-    titleEl.textContent = data2.timezone;
+     var windContentEl = document.createElement('p');
+    windContentEl.innerHTML =
+        '<strong>Current wind speed: </strong> ' + data2.current.wind_speed + ' mph<br/>';
 
-    var bodyContentEl = document.createElement('p');
-    bodyContentEl.innerHTML =
-        '<strong>Date:</strong> ' + data2.lat + '<br/>';
+        var humidityContentEl = document.createElement('p');
+    humidityContentEl.innerHTML =
+        '<strong>Current Humidity: </strong> ' + data2.current.humidity + '%<br/>';
+
+        var feelsContentEl = document.createElement('p');
+    feelsContentEl.innerHTML =
+        '<strong>Feels Like: </strong> ' + data2.current.feels_like + ' deg F<br/>';
 
  //   if (resultObj.subject) {
   //      bodyContentEl.innerHTML +=
@@ -41,12 +51,12 @@ function printResults(data2) {
   //          '<strong>Description:</strong>  No description for this entry.';
  //   }
 
-    var linkButtonEl = document.createElement('a');
-    linkButtonEl.textContent = 'Read More';
-    linkButtonEl.setAttribute('href', data2.url);
-    linkButtonEl.classList.add('btn', 'btn-dark');
+  //  var linkButtonEl = document.createElement('a');
+   // linkButtonEl.textContent = 'Read More';
+   // linkButtonEl.setAttribute('href', data2.url);
+  //  linkButtonEl.classList.add('btn', 'btn-dark');
 
-    resultBody.append(titleEl, bodyContentEl, linkButtonEl);
+    resultBody.append(tempContentEl,  windContentEl, humidityContentEl, feelsContentEl);
 
     resultContentEl.append(resultCard);
 }
@@ -60,6 +70,10 @@ function searchValue(event) {
     var listedCity = $('<button type="submit" id="search-button" class="btn">');
     listedCity.text(searchedCity);
     listedCity.appendTo(citiesList);
+
+    var cityTitle = $('<button type="submit" id="search-button" class="btn">');
+    cityTitle.text(searchedCity);
+    cityTitle.appendTo(cityHead);
 
     getCurrentWeather(searchedCity);
 }
@@ -84,7 +98,7 @@ function getCurrentWeather(searchedCity) {
 
                 // this is to make the new api call. maybe i need to make a whole new funcion for this.
 
-                var oneClickUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=" + keyTwo;
+                var oneClickUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&units=imperial" + "&appid=" + keyTwo;
                 fetch(oneClickUrl)
                     .then(function (res) {
                     //    res.preventDefault();
